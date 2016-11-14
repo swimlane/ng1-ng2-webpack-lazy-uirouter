@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { UIRouterModule } from 'ui-router-ng2';
-import { CommonNg2Module } from 'app/common';
+import { CommonNg2Module } from '../common';
 
-import { ADMIN_STATES } from './admin.state.js';
-import { AdminComponent } from './admin.component.js';
-import { ResetComponent } from './reset/reset.component.js';
+import { ADMIN_STATES } from './admin.state';
+import { AdminComponent } from './admin.component';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   imports: [

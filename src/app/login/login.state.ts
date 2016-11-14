@@ -1,8 +1,8 @@
-import { LoginController } from './login.controller.js';
-import { loginTemplate } from './login.template.js';
+import { LoginController } from './login.controller';
+import { loginTemplate } from './login.template';
 
-import { HelloController } from './hello/hello.controller.js';
-import { helloTemplate } from './hello/hello.template.js';
+import { HelloController } from './hello/hello.controller';
+import { helloTemplate } from './hello/hello.template';
 
 export function configState($stateProvider, $urlRouterProvider) {
   $stateProvider.state('login', {

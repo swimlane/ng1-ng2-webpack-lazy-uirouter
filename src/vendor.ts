@@ -2,7 +2,7 @@
 import 'rxjs';
 
 // ng1
-import angular from 'angular';
+import 'angular';
 
 // ng2
 import '@angular/platform-browser';

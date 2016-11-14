@@ -20,7 +20,7 @@ export const adapter = new UpgradeAdapter(forwardRef(() => UpgradeModule));
 // put in the global common module.
 // ---
 // See: https://github.com/angular/angular/issues/11069
-const { UpgradeModule } = require('app/upgrade.module.js');
+import { UpgradeModule } from 'app/upgrade.module';
 
 // Bootstrap ui-router
 uiRouterNgUpgrade.setUpgradeAdapter(adapter);
