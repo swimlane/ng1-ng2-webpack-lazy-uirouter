@@ -1,4 +1,4 @@
-import angular from 'angular';
+declare var angular: any;
 
 export const ButtonComponent = {
 

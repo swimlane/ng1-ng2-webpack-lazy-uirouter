@@ -28,9 +28,9 @@ let webpackConfig = {
     'source-map',
 
   entry: {
-    app: './src/bootstrap.js',
-    vendor: './src/vendor.js',
-    polyfills: './src/polyfills.js'
+    app: './src/bootstrap.ts',
+    vendor: './src/vendor.ts',
+    polyfills: './src/polyfills.ts'
   },
 
   output: {
@@ -55,7 +55,7 @@ let webpackConfig = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.html'],
+    extensions: ['', '.js', '.ts', '.html'],
     descriptionFiles: ['package.json'],
     root: root('src'),
     modules: [
@@ -75,6 +75,11 @@ let webpackConfig = {
       {
         test: /\.js$/,
         loader: 'babel?cacheDirectory',
+        exclude: /(node_modules)/
+      },
+      {
+        test: /\.ts$/,
+        loader: 'awesome-typescript-loader',
         exclude: /(node_modules)/
       }
     ]
@@ -124,11 +129,11 @@ let webpackConfig = {
 
 if(IS_PRODUCTION) {
 
-  config.plugins.push(new webpack.optimize.DedupePlugin());
+  webpackConfig.plugins.push(new webpack.optimize.DedupePlugin());
 
-  config.plugins.push(new webpack.NoErrorsPlugin());
+  webpackConfig.plugins.push(new webpack.NoErrorsPlugin());
 
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+  webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
     // beautify: true, //debug
     // mangle: false, //debug
     // dead_code: false, //debug

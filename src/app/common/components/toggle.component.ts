@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
     <button type="button">ng2 component - {{age}}</button>
   `
 })
+
 export class ToggleComponent {
-
   @Input() age = 23;
-
 }

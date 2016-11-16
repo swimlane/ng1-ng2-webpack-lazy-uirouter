@@ -13,7 +13,7 @@ Under the hood this uses:
 - Babel 6
 
 ## Running
-- `npm i`
+- `yarn`
 - `npm start`
 - Open browser to [http://localhost:9999](http://localhost:9999)
 

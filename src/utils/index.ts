@@ -1,7 +1,7 @@
-export * from './loadNg1Module.js';
-export * from './configRouting.js';
+export * from './loadNg1Module';
+export * from './configRouting';
 
-import { loadNgModule } from './loadNg2Module.js';
+import { loadNgModule } from './loadNg2Module';
 
 // This simplifies using `loadNgModule`
 // https://github.com/angular-ui/ui-router/pull/3037

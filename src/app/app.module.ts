@@ -1,6 +1,6 @@
-import angular from 'angular';
-import { configRouting } from 'utils';
-import { commonNg1Module } from 'app/common';
+declare var angular: any;
+import { configRouting } from '../utils';
+import { commonNg1Module } from './common';
 
 export const appModule = angular
   .module('app', [

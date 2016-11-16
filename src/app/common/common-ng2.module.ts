@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { adapter } from 'adapter.js';
+import { adapter } from '../../adapter';
 
 // ng2 services & components
-import { AdminService } from './services/admin.service.js';
-import { ToggleComponent } from './components/toggle.component.js';
+import { AdminService } from './services/admin.service';
+import { ToggleComponent } from './components/toggle.component';
 
 // ng1 components & services
-import { ButtonComponent } from './components/button.component.js';
-import { LoginService } from 'app/common/services/login.service.js';
+import { ButtonComponent } from './components/button.component';
+import { LoginService } from '../common/services/login.service';
 
 // downgraded ng1 components
 const ng1ButtonComponent = adapter.upgradeNg1Component('coolButton');

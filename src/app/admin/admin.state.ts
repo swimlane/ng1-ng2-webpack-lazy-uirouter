@@ -1,6 +1,6 @@
-import { AdminComponent } from './admin.component.js';
-import { ResetComponent } from './reset/reset.component.js';
-import { AdminService, LoginService } from 'app/common';
+import { AdminComponent } from './admin.component';
+import { ResetComponent } from './reset/reset.component';
+import { AdminService, LoginService } from '../common';
 
 export const ADMIN_STATES = [
   {
@@ -20,7 +20,7 @@ export const ADMIN_STATES = [
       {
         token: 'profile',
         deps: [LoginService],
-        resolveFn: function(loginService: LoginService) {
+        resolveFn: function(loginService: any) {
           return loginService.get();
         }
       }
